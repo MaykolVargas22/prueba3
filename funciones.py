@@ -1,4 +1,7 @@
-  def registrar_pedido():
+import as archivo.txt
+pedidos= []
+
+def registrar_pedido():
     nombre_apellido = input("Ingrese nombre y apellido del cliente: ")
     direccion = input("Ingrese dirección del cliente: ")
     sector = input("Ingrese sector del cliente (Centro, Norte, Sur): ")
