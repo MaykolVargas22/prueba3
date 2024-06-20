@@ -32,12 +32,12 @@ def imprimir_hoja_ruta():
     pedidos_sector = [pedido for pedido in pedidos if pedido["sector"] == sector]
     if pedidos_sector:
         archivo = f"hoja_ruta_{sector}.txt"
-        with open(archivo, "w") as f:
+        with open(archivo, "w") as archivo:
             for pedido in pedidos_sector:
-                write(f"Cliente: {pedido['nombre_apellido']}\n")
-                write(f"Dirección: {pedido['direccion']}\n")
-                write(f"Sector: {pedido['sector']}\n")
-                write("Paquetes:\n")
+                archivo.write(f"Cliente: {pedido['nombre_apellido']}\n")
+                archivo.write(f"Dirección: {pedido['direccion']}\n")
+                arvhivo.write(f"Sector: {pedido['sector']}\n")
+                archivo.write("Paquetes:\n")
                 for tipo_paquete, cantidad in pedido["paquetes"].items():
                     write(f"  {tipo_paquete}: {cantidad}\n")
         
